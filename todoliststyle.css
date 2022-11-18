@@ -1,0 +1,52 @@
+header {
+    color: rebeccapurple;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button {
+    justify-content: space-around;
+    display: flex;
+}
+
+.buttons {
+    color: blue;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    border-color: fuchsia;
+}
+
+p {
+    display: flex;
+    justify-content: left;
+    margin-left: 50px;
+    color: darkviolet;
+    font-size: 30px;
+
+}
+
+.task:hover {
+    color: fuchsia;
+}
+
+input:checked ~ label {
+    opacity: 0.5;
+    color:hotpink;
+    text-decoration: line-through;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}
