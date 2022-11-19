@@ -4,7 +4,7 @@ function addNewTask() {
     if(res) {
     let task = document.createElement('p');
     task.className = 'task';
-    task.innerHTML = '<input type="checkbox"><label>' + res + '</label>';
+    task.innerHTML = '<input type="checkbox"><label>' + res + '</label><button title="delete" onclick="removeTask(event)"><i class="fa-solid fa-trash"></i></button>';
     let targ = document.querySelector('.tasks');
     targ.appendChild(task);
     task.firstChild.id = `task${count}`;
@@ -30,4 +30,9 @@ function rate() {
     let rating = document.createElement('p');
     rating.innerText = text;
     parent.appendChild(rating);
+}
+
+function removeTask(event) {
+    let task = event.currentTarget;
+    task.parentNode.remove();
 }
