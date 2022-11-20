@@ -23,6 +23,10 @@ header {
     border-color: fuchsia;
 }
 
+.button:hover, .button_remove:hover {
+    box-shadow: 0 0 5px 0 fuchsia, 0 0 15px 0 blue;
+}
+
 p {
     display: flex;
     justify-content: left;
@@ -32,7 +36,7 @@ p {
 
 }
 
-.task:hover {
+.task label:hover {
     color: fuchsia;
 }
 
