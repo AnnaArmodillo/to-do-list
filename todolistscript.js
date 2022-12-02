@@ -1,7 +1,7 @@
 let count = 0;
 function addNewTask() {
     let res = prompt('type here');
-    if(res) {
+    if (res) {
     let task = document.createElement('p');
     task.className = 'task';
     task.innerHTML = '<input type="checkbox"><label>' + res + '</label><button class="button_remove" title="delete" onclick="removeTask(event); updateStorage()"><i class="fa-solid fa-trash"></i></button>';
@@ -15,16 +15,16 @@ let done = 0;
 function rate() {
     done = 0;
     let parent = document.querySelector('.rating');
-    if(parent.firstChild) parent.firstChild.remove();
+    if (parent.firstChild) parent.firstChild.remove();
     let allTasks = document.querySelectorAll('.task');
     allTasks.forEach(task => {
-        console.log(task.firstChild.value);
-        if(task.firstChild.checked === true) done++;
+        if (task.firstChild.checked === true) done++;
     })
-    if((done / allTasks.length) >= 0.8) {
+    if ((done / allTasks.length) === 1) {
         text = 'Молодец какой!';
-    }
-    else {
+    } else if ((done / allTasks.length) >= 0.8) {
+        text = 'Надо лучше стараться.';
+    } else {
         text = 'Чё весь день делал-то тогда?';
     }
     let rating = document.createElement('p');

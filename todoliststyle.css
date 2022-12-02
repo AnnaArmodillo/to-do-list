@@ -1,20 +1,39 @@
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(
+      200deg,
+      rgba(97, 65, 173, 0.8),
+      rgba(206, 121, 168, 0.575) 60%
+    ), linear-gradient(127deg, rgba(245, 177, 224, 0.8), rgba(153, 204, 245, 0.329) 60%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0.178) 40%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    padding: 30px;
+}
+
 header {
     color: rebeccapurple;
     font-size: 40px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .buttons {
     justify-content: space-around;
     display: flex;
+    gap: 10px;
 }
 
 .button {
     color: blue;
     text-align: center;
-    width: 200px;
     height: 50px;
     background-color: aqua;
     border-radius: 10px;
@@ -27,13 +46,13 @@ header {
     box-shadow: 0 0 5px 0 fuchsia, 0 0 15px 0 blue;
 }
 
-p {
+.tasks p {
     display: flex;
     justify-content: left;
-    margin-left: 50px;
     color: darkviolet;
     font-size: 30px;
-
+    align-items: center;
+    word-break: break-all;
 }
 
 .task label:hover {
@@ -53,6 +72,12 @@ label {
 .rating {
     display: flex;
     justify-content: center;
+    color: darkviolet;
+    font-size: 30px;
+}
+
+.rating p {
+    text-align: center;
 }
 
 .task button {
@@ -61,8 +86,19 @@ label {
     border-color: blue;
     border-radius: 5px;
     border-style: dotted;
+    height: 34px;
 }
 
 .fa-trash {
     color:blue;
+}
+
+@media (max-width: 720px) {
+    .buttons {
+        flex-wrap: wrap;
+        width: 200px;
+        justify-content: center;
+        margin: auto;
+    }
+
 }
